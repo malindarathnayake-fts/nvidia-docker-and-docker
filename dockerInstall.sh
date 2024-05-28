@@ -41,47 +41,8 @@ add-apt-repository \
 $(lsb_release -cs) \
 stable"
 
-# Update package lists from the repositories after adding Docker repository
-apt update -y
-
-# Upgrade installed packages to their latest versions after adding Docker repository
-apt upgrade -y
-
-# Update package lists from the repositories (apt-get) after adding Docker repository
-apt-get update -y
-
-# Upgrade installed packages to their latest versions (apt-get) after adding Docker repository
-apt-get upgrade -y
-
 # Install Docker packages along with containerd
-apt-get install -y docker-ce docker-ce-cli containerd.io
-
-# Update package lists from the repositories after installing Docker
-apt update -y
-
-# Upgrade installed packages to their latest versions after installing Docker
-apt upgrade -y
-
-# Update package lists from the repositories (apt-get) after installing Docker
-apt-get update -y
-
-# Upgrade installed packages to their latest versions (apt-get) after installing Docker
-apt-get upgrade -y
-
-# Install Docker packages along with containerd
-apt-get install -y docker-ce docker-ce-cli containerd.io
-
-# Update package lists from the repositories after installing Docker
-apt update -y
-
-# Upgrade installed packages to their latest versions after installing Docker
-apt upgrade -y
-
-# Update package lists from the repositories (apt-get) after installing Docker
-apt-get update -y
-
-# Upgrade installed packages to their latest versions (apt-get) after installing Docker
-apt-get upgrade -y
+apt-get update && apt-get install -y docker-ce docker-ce-cli containerd.io
 
 # Run a simple Docker container "hello-world" to check if Docker is working correctly
 docker run hello-world
